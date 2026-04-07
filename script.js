@@ -10,4 +10,27 @@ if (ulAgenda){
    if(secaoContato){
     secaoContato.classList.add(contato-box);
    }
+
+   const linksMenu = document.querySelector("nav a");
+   const secoes = document.querySelectorAll("section[id]");
+
+   const cards = document.querySelectorAll(".card");
+   for(let i = 0; i < cards.length; i++){
+    cards[i].Style.transition = "0.3s ease";
+
+    cards[i].addEventListener("mouseenter", function(){
+      this.style.transform = "traslateY(-6px)";
+    });
+
+    cards[i].addEventListener("mouseenter", function(){
+      this.style.transform = "traslateY(0)";
+   });
+ }
+ 
+ const botao = document.querySelector("btn");
+ if(botao){
+  botao.addEventListener("click", function(){
+
+  });
+ }
 });

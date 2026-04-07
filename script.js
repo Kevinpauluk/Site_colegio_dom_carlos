@@ -6,6 +6,7 @@ if (ulAgenda){
     ulAgenda.classList.add("agenda");
      }
    }
+   
    const secaoContato = document.querySelector("#contato");
    if(secaoContato){
     secaoContato.classList.add(contato-box);
@@ -30,7 +31,21 @@ if (ulAgenda){
  const botao = document.querySelector("btn");
  if(botao){
   botao.addEventListener("click", function(){
-
+    alert("Você está vendo sobre o colegio");
   });
  }
+
+ if(secaoContato){
+  const paragrafos = secaoContato.querySelectorAll("p");
+  for(let i = 0; i < paragrafos.length, i++){
+    if(paragrafos[i].textContent.includes("@")){
+       paragrafos[i].style.cursor = "pointer";
+       paragrafos[i].addEventListener("click", function(){
+         alert("E-mail de contato: contato@domcarlos.edu.br")
+       });
+     }
+   }
+ }
+
+
 });
